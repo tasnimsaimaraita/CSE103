@@ -1,9 +1,5 @@
 #include<stdio.h>
-int main ()
-{
-    printf("The woods are lovely, dark and deep,\n");
-    printf("But I have promises to keep,\n");
-    printf("And miles to go before I sleep,\n");
-    printf("And miles to go before I sleep.");
+int main(){
+    printf("The woods are lovely, dark and deep,\nBut I have promises to keep,\nAnd miles to go before I sleep,\nAnd miles to go before I sleep.");
     return 0;
 }
