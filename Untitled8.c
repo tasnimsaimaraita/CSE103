@@ -1,22 +1,19 @@
-#include<stdio.h>
+#include<Stdio.h>
 
 int main()
 {
-    int x,y,z;
-    printf("Enter x & y & z:");
-    scanf("%d%d%d",&x,&y,&z);
-    if(x<=y && x<=z)
+    int n,i,sum=0;
+    printf("Enter the value of n:");
+    scanf("%d",&n);
+
+    for(i=1 ; i<=n ; i++)
     {
-        printf("%d",x);
+        if(i%2!=0)
+        {
+            sum = sum+i;
+        }
     }
-    else if(y<=x && y<=z)
-    {
-        printf("%d",y);
-    }
-    else
-    {
-        printf("%d",z);
-    }
+    printf("Sum of odd number %d",sum);
     return 0;
 }
 

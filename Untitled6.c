@@ -1,18 +1,18 @@
-#include<stdio.h>
+#include<Stdio.h>
 
 int main()
 {
-    char c;
-    printf("Enter a char:");
-    scanf("%c",&c);
-    if(c=='a' || c=='e' || c=='i' || c=='o' ||c=='u')
+    int n,i,sum=0;
+    printf("Enter the value of upper limit:");
+    scanf("%d",&n);
+
+    for(i=1 ; i<=n ; i++)
     {
-        printf("Vowel");
+
+        sum=sum+i;
     }
-    else
-    {
-        printf("Consonant");
-    }
+    printf("Sum is %d:",sum);
     return 0;
 }
+
 

@@ -1,20 +1,24 @@
-#include<stdio.h>
+#include<Stdio.h>
 
 int main()
 {
-    int x,y,z;
-    printf("Enter x & y & z:");
-    scanf("%d%d%d",&x,&y,&z);
-    if(x+y>z && y+z>x && x+z>y)
+    int n,c=0;
+    printf("Enter the value of n:");
+    scanf("%d",&n);
+
+    if(n==0)
     {
-        printf("Triangle");
+        c=1;
     }
     else
     {
-        printf("Not a triangle");
+        while(n!=0)
+        {
+            n=n/10;
+            c++;
+        }
     }
+    printf("number of digits:%d\n",c);
     return 0;
 }
-
-
 

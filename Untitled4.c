@@ -1,17 +1,17 @@
-#include<stdio.h>
+#include<Stdio.h>
 
 int main()
 {
-    int x;
-    printf("Enter x:");
-    scanf("%d",&x);
-    if(x%2==0)
+    int n,i;
+    printf("Enter the value of n:");
+    scanf("%d",&n);
+
+    for(i=1 ; i<=n ; i++)
     {
-        printf("Even");
-    }
-    else
-    {
-        printf("Odd");
+        if(i%2==0)
+        {
+            printf("Even number:%d\n",i);
+        }
     }
     return 0;
 }

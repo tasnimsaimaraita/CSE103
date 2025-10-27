@@ -1,17 +1,12 @@
-#include<stdio.h>
+#include<Stdio.h>
 
 int main()
 {
-    int x,y;
-    printf("Enter x & y:");
-    scanf("%d%d",&x,&y);
-    if(x>y)
+    char c;
+
+    for(c='a' ; c<='z' ; c++)
     {
-        printf("%d",x);
-    }
-    else
-    {
-        printf("%d",y);
+        printf("Output:%c\n",c);
     }
     return 0;
 }

@@ -3,16 +3,16 @@
 int main()
 {
     int n,f,l;
-    printf("Enter a value:");
+    printf("Enter any value:");
     scanf("%d",&n);
+
     l=n%10;
     f=n;
     while(f>=10)
     {
         f=f/10;
     }
-    printf("First digit %d\n",f);
-    printf("Last digit %d\n",l);
+    int sum =f+l;
+    printf("sum of First & last digit %d\n",sum);
     return 0;
 }
-

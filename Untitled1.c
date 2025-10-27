@@ -1,17 +1,14 @@
-#include<stdio.h>
+#include<Stdio.h>
 
 int main()
 {
-    int x;
-    printf("Enter x:");
-    scanf("%d",&x);
-    if(x>=0)
+    int n,i;
+    printf("Enter the value of n:");
+    scanf("%d",&n);
+
+    for(i=1 ; i<=n ; i++)
     {
-        printf("Non-Negative");
-    }
-    else
-    {
-        printf("Negative");
+        printf("Output:%d\n",i);
     }
     return 0;
 }

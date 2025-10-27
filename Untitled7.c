@@ -1,21 +1,20 @@
-#include<stdio.h>
+#include<Stdio.h>
 
 int main()
 {
-    char c;
-    printf("Enter a char:");
-    scanf("%c",&c);
-    if(c=='a' || c=='e' || c=='i' || c=='o' ||c=='u')
+    int n,i,sum=0;
+    printf("Enter the value of n:");
+    scanf("%d",&n);
+
+    for(i=1 ; i<=n ; i++)
     {
-        printf("Vowel");
+        if(i%2==0)
+        {
+            sum = sum+i;
+        }
     }
-    else if (c>='a'&& c<='z'){
-        printf("Consonant");
-    }
-    else
-    {
-        printf("Others");
-    }
+    printf("Sum of even number %d",sum);
     return 0;
 }
+
 
