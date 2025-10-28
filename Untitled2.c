@@ -1,15 +1,16 @@
-#include<Stdio.h>
-
+#include<stdio.h>
 int main()
 {
-    int n,i;
-    printf("Enter the value of n:");
+    int n,d=0,r;
+    printf("Enter any number :");
     scanf("%d",&n);
 
-    for(i=n ; i>=1 ; i--)
+    while(n!=0)
     {
-        printf("Output:%d\n",i);
+        d=n%10;
+        r=r*10+d;
+        n=n/10;
     }
+    printf("Reversed numbers are:%d\n",r);
     return 0;
 }
-

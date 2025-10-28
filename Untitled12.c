@@ -1,18 +1,16 @@
-#include<Stdio.h>
-
+#include<stdio.h>
 int main()
 {
-    int n,f,l;
-    printf("Enter any value:");
+    int n,i,sum=0;
+    printf("Enter the value of n:");
     scanf("%d",&n);
 
-    l=n%10;
-    f=n;
-    while(f>=10)
+    for(i=2 ; i<=n ; i+=2)
     {
-        f=f/10;
+        sum = sum+i;
     }
-    int sum =f+l;
-    printf("sum of First & last digit %d\n",sum);
+    printf("sum of Even numbers:%d\n",sum);
     return 0;
 }
+
+

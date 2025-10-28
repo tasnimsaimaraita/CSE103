@@ -1,13 +1,22 @@
-#include<Stdio.h>
-
+#include<stdio.h>
 int main()
 {
-    char c;
+    int n,c=0;
+    printf("Enter any numbers:");
+    scanf("%d",&n);
 
-    for(c='a' ; c<='z' ; c++)
+    if(n==0)
     {
-        printf("Output:%c\n",c);
+        c=1;
     }
+    else
+    {
+        while(n!=0)
+        {
+            n=n/10;
+            c++;
+        }
+    }
+    printf("Output %d",c);
     return 0;
 }
-

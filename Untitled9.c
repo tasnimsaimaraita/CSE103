@@ -1,14 +1,13 @@
-#include<Stdio.h>
-
+#include<stdio.h>
 int main()
 {
-    int n,i;
-    printf("Enter the value of n:");
-    scanf("%d",&n);
+    char c;
 
-    for(i=1 ; i<=10 ; i++)
+
+    for(c='a' ; c<='z' ; c++)
     {
-        printf("%d * %d = %d\n",n,i,(n*i));
+
+        printf("output:%c\n",c);
     }
     return 0;
 }

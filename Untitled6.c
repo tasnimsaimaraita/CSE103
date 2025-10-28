@@ -1,18 +1,36 @@
-#include<Stdio.h>
+#include<stdio.h>
 
 int main()
 {
-    int n,i,sum=0;
-    printf("Enter the value of upper limit:");
+    int n,c=0,i;
+    printf("Enter the value of n:");
     scanf("%d",&n);
 
-    for(i=1 ; i<=n ; i++)
+    if(n<=1)
     {
-
-        sum=sum+i;
+        printf("%d is not a prime number",n);
     }
-    printf("Sum is %d:",sum);
+    else
+    {
+        for(i=2 ; i<n ; i++)
+        {
+            if(n%i==0)
+            {
+                c++;
+                break;
+            }
+
+        }
+        if (c==0)
+        {
+            printf("%d is a prime number",n);
+        }
+        else
+        {
+            printf("%d is not a prime number",n);
+        }
+
+    }
     return 0;
+
 }
-
-

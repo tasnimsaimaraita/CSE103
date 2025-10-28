@@ -1,24 +1,15 @@
-#include<Stdio.h>
-
+#include<stdio.h>
 int main()
 {
-    int n,c=0;
+    int n,i;
     printf("Enter the value of n:");
     scanf("%d",&n);
 
-    if(n==0)
+    for(i=2 ; i<=n ; i+=2)
     {
-        c=1;
+
+        printf("Even numbers:%d\n",i);
     }
-    else
-    {
-        while(n!=0)
-        {
-            n=n/10;
-            c++;
-        }
-    }
-    printf("number of digits:%d\n",c);
     return 0;
 }
 

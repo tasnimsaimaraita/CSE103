@@ -1,14 +1,14 @@
-#include<Stdio.h>
+#include<stdio.h>
 
 int main()
 {
-    int n,i;
-    printf("Enter the value of n:");
-    scanf("%d",&n);
-
-    for(i=1 ; i<=n ; i++)
-    {
-        printf("Output:%d\n",i);
+    int x,y;
+    printf("Enter the value: ");
+    scanf("%d",&x);
+    y=1;
+    for(int i=1;i<=x;i++){
+        y*=i;
     }
+    printf("factorial of %d is: %d",x,y);
     return 0;
 }

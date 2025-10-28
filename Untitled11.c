@@ -1,18 +1,16 @@
-#include<Stdio.h>
-
+#include<stdio.h>
 int main()
 {
-    int n,f,l;
-    printf("Enter a value:");
+    int n,i;
+    printf("Enter the value of n:");
     scanf("%d",&n);
-    l=n%10;
-    f=n;
-    while(f>=10)
+
+    for(i=1 ; i<=n ; i+=2)
     {
-        f=f/10;
+
+        printf("Odd numbers:%d\n",i);
     }
-    printf("First digit %d\n",f);
-    printf("Last digit %d\n",l);
     return 0;
 }
+
 
