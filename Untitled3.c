@@ -1,22 +1,21 @@
-#include<stdio.h>
+#include<Stdio.h>
 int main()
 {
-    int n,c=0;
-    printf("Enter any numbers:");
+    int n,i,sum=0,a[1000];
+
+    printf("enter n:");
     scanf("%d",&n);
 
-    if(n==0)
+    printf("Enter elements:");
+    for(i=0 ; i<n ; i++)
     {
-        c=1;
+        scanf("%d",&a[i]);
     }
-    else
+
+    for(i=0 ; i<n ; i++)
     {
-        while(n!=0)
-        {
-            n=n/10;
-            c++;
-        }
+        sum=sum+a[i];
     }
-    printf("Output %d",c);
+    printf("Sum of all elements:%d\n",sum);
     return 0;
 }

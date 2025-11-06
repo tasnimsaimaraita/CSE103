@@ -1,36 +1,28 @@
 #include<stdio.h>
-
 int main()
 {
-    int n,c=0,i;
-    printf("Enter the value of n:");
+    int n,i,c=0,a[1000];
+    int even=0, odd=0;
+    printf("Enter n:");
     scanf("%d",&n);
 
-    if(n<=1)
+    printf("Enter elements:\n");
+    for(i=0 ; i<n ; i++)
     {
-        printf("%d is not a prime number",n);
+        scanf("%d",&a[i]);
     }
-    else
+    for(i=0 ; i<n ; i++)
     {
-        for(i=2 ; i<n ; i++)
+        if(a[i]%2==0)
         {
-            if(n%i==0)
-            {
-                c++;
-                break;
-            }
-
-        }
-        if (c==0)
-        {
-            printf("%d is a prime number",n);
+            even++;
         }
         else
         {
-            printf("%d is not a prime number",n);
+            odd++;
         }
-
     }
+    printf("Even numbers:%d\n",even);
+    printf("Odd numbers:%d\n",odd);
     return 0;
-
 }
