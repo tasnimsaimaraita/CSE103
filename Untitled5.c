@@ -1,27 +1,33 @@
-#include<Stdio.h>
-int main(){
-    int n,i,a[1000],l1,l2;
-    printf("enter n:");
+#include<stdio.h>
+int main ()
+{
+    int n, i,even=0,odd=0;
+    int arr[100];
+
+    printf("Enter n:");
     scanf("%d",&n);
 
-    printf("Enter elements:");
-    for(i=0 ; i<n ; i++){
-        scanf("%d",&a[i]);
-    }
-    if(a[0] > a[1]){
-        l1=a[0];
-        l2=a[1];
-    }
-    else{
-        l1=a[1];
-        l2=a[0];
+    printf("Enter elements:\n");
+    for(i=0 ; i<n ; i++)
+    {
+        scanf("%d",&arr[i]);
     }
 
-    for(i=0 ; i<n ; i++){
-        if(a[i] > l1){
-            l2=l1;
-            l1=a[i];
+    for(i=0 ; i<n ; i++)
+    {
+        if(arr[i]%2==0)
+        {
+            even++;
         }
-        else if()
+        else
+        {
+            odd++;
+        }
     }
+    printf("Total even numbers is %d\n",even);
+    printf("Total odd numbers is %d\n",odd);
+
+    return 0;
 }
+
+

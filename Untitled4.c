@@ -1,30 +1,26 @@
 #include<stdio.h>
-int main()
+int main ()
 {
-    int n,i,a[1000],max,min;
+    int n, i,min;
+    int arr[100];
+
     printf("Enter n:");
     scanf("%d",&n);
 
     printf("Enter elements:\n");
     for(i=0 ; i<n ; i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
-    max=a[0];
-    min=a[0];
+    min=arr[0];
 
-    for(i=0 ; i<n ; i++)
+    for(i=1 ; i<n ; i++)
     {
-        if(a[i]>max)
-        {
-            max=a[i];
-        }
-        if(a[i]<min)
-        {
-            min=a[i];
-        }
+        if(arr[i]<min)
+            min=arr[i];
     }
-    printf("Maximum :%d\n",max);
-    printf("Minimum :%d",min);
+    printf("Minimun value is %d\n",min);
     return 0;
 }
+
+

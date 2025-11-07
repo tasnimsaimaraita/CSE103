@@ -1,9 +1,8 @@
 #include<stdio.h>
-
-int main()
+int main ()
 {
-    int n,i;
-    int a[1000];
+    int n, i,s=0;
+    int arr[100];
 
     printf("Enter n:");
     scanf("%d",&n);
@@ -11,15 +10,14 @@ int main()
     printf("Enter elements:\n");
     for(i=0 ; i<n ; i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
-    printf("Negative elements are:\n");
+
     for(i=0 ; i<n ; i++)
     {
-        if(a[i]<0)
-        {
-            printf("%d ",a[i]);
-        }
+        s=s+arr[i];
     }
+    printf("sum of all elements are:%d\n",s);
     return 0;
 }
+

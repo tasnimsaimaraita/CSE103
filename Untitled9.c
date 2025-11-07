@@ -1,41 +1,33 @@
-#include<Stdio.h>
-
+#include<stdio.h>
 int main()
 {
-    int n,i,e,p,a[1000];
+    int n,i,a[10000];
+    int p=0,ne=0,z=0;
     printf("Enter n:");
     scanf("%d",&n);
 
-    printf("Enter the elements:\n");
+    printf("Enter elements:\n");
     for(i=0 ; i<n ; i++)
     {
         scanf("%d",&a[i]);
     }
-    printf("Enter element to insert:\n");
-    scanf("%d",&e);
-
-    printf("Enter position to insert(1 to %d): ",n+1);
-    scanf("%d",&p);
-
-    if(p<1 || p>n+1)
+    for(i=0 ; i<n ; i++)
     {
-        printf("Invalid position\n");
-        return 0;
+        if(a[i]>0)
+        {
+            p++;
+        }
+        else if(a[i]<0)
+        {
+            ne++;
+        }
+        else
+        {
+            z++;
+        }
     }
-    for(i=n ; i>=p ; i--)
-    {
-        a[i]=a[i-1];
-    }
-    a[p-1] = e;
-
-    n++;
-
-    printf("Updated array:\n");
-    for(i = 0; i < n; i++)
-    {
-        printf("%d ", a[i]);
-    }
-    printf("\n");
-
+    printf("Positive =%d\n",p);
+    printf("Negative =%d\n",ne);
+    printf("Zero =%d\n",z);
     return 0;
 }

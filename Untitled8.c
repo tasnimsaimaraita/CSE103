@@ -1,8 +1,10 @@
-#include<Stdio.h>
-int main()
-{
 
-    int n,i,a[1000],b[1000];
+#include<stdio.h>
+int main ()
+{
+    int n, i,sum=0;
+    int arr[100];
+    float avg;
 
     printf("Enter n:");
     scanf("%d",&n);
@@ -10,19 +12,16 @@ int main()
     printf("Enter elements:\n");
     for(i=0 ; i<n ; i++)
     {
-        scanf("%d",&a[i]);
-    }
-    for(i=0 ; i<n ; i++)
-    {
-        b[i]=a[i];
+        scanf("%d",&arr[i]);
     }
 
-    printf("Elements of 2nd array:\n");
     for(i=0 ; i<n ; i++)
     {
-        printf("%d ",b[i]);
-
+        sum=sum+arr[i];
     }
+    avg = (float)sum/n;
+    printf("Average = %.2f\n",avg);
 
     return 0;
 }
+

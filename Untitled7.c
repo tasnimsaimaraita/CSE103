@@ -1,7 +1,9 @@
-#include<Stdio.h>
-int main()
+#include<stdio.h>
+int main ()
 {
-    int n, i,c=0,a[1000];
+    int n, i;
+    int a[1000],b[1000];
+
     printf("Enter n:");
     scanf("%d",&n);
 
@@ -10,13 +12,15 @@ int main()
     {
         scanf("%d",&a[i]);
     }
+    for(i=0 ; i<n ; i++){
+        b[i]=a[i];
+    }
+    printf("Copyed elements are:\n");
     for(i=0 ; i<n ; i++)
     {
-        if(a[i]<0)
-        {
-            c++;
-        }
+        printf("%d ", b[i]);
     }
-    printf("Total number of negative elements:%d",c);
     return 0;
 }
+
+

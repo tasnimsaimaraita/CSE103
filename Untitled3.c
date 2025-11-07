@@ -1,21 +1,25 @@
-#include<Stdio.h>
-int main()
+#include<stdio.h>
+int main ()
 {
-    int n,i,sum=0,a[1000];
+    int n, i,max;
+    int arr[100];
 
-    printf("enter n:");
+    printf("Enter n:");
     scanf("%d",&n);
 
-    printf("Enter elements:");
+    printf("Enter elements:\n");
     for(i=0 ; i<n ; i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
+    max=arr[0];
 
-    for(i=0 ; i<n ; i++)
+    for(i=1 ; i<n ; i++)
     {
-        sum=sum+a[i];
+        if(arr[i]>max)
+            max=arr[i];
     }
-    printf("Sum of all elements:%d\n",sum);
+    printf("Maximum value:%d\n",max);
     return 0;
 }
+
