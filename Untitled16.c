@@ -1,16 +1,31 @@
-#include<Stdio.h>
+#include<stdio.h>
 int main()
 {
-    int n,r,d=0;
-    printf("Enter any value:");
-    scanf("%d",&n);
-    while(n!=0)
+    int a,c;
+    float i;
+    char e;
+
+    printf("Enter age:\n");
+    scanf("%d",&a);
+
+    printf("Enter income:\n");
+    scanf("%f",&i);
+
+    printf("age you employed (Y/N):\n");
+    scanf(" %c",&e);
+
+    printf("Enter credit(0-100):\n");
+    scanf("%d",&c);
+
+
+    if(a>=21 && i>=20000 && (e=='Y' || e=='y') && c>=70)
     {
-        d=n%10;
-        r=r*10+d;
-        n=n/10;
+        printf("CONGO!! You are eligible for a bank loan.\n");
     }
-    printf("Reverse numbers:%d\n",r);
+    else
+    {
+        printf("SORRY!! You are not eligible for a bank loan.");
+    }
     return 0;
 }
 

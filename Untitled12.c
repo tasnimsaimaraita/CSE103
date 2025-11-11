@@ -1,37 +1,17 @@
 #include<stdio.h>
-int main ()
-{
-    int n,i,j,k;
-    int a[100];
+int main(){
+    float s,m,h;
 
-    printf("Enter n:");
-    scanf("%d",&n);
+    printf("Enter s:");
+    scanf("%f",&s);
 
-    printf("Enter elements:\n");
-    for(i=0 ; i<n ; i++)
-    {
-        scanf("%d",&a[i]);
-    }
+    m=s/60;
+    h=m/60;
 
-    for(i=0 ; i<n ; i++)
-    {
-        for(j=i+1 ; j<n ; j++)
-        {
-            if(a[i]==a[j])
-            {
-                for(k=j ; k<n-1 ; k++)
-                {
-                    a[k]=a[k+1];
-                }
-                n--;
-                j--;
-            }
-        }
-    }
-    printf("After remove duplicate:\n");
-    for(i=0 ; i<n ; i++)
-    {
-        printf("%d ",a[i]);
-    }
+    printf("%.2f minutes\n",m);
+    printf("%.2f hours\n",h);
+
     return 0;
 }
+
+

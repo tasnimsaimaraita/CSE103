@@ -1,22 +1,22 @@
 #include<stdio.h>
-int main ()
+int main()
 {
-    int n, i;
-    int arr[100];
+    double act_amount,dis_amount;
+    printf("Enter actual amount:\n");
+    scanf("%lf",&act_amount);
 
-    printf("Enter n:");
-    scanf("%d",&n);
-
-    printf("Enter elements:\n");
-    for(i=0 ; i<n ; i++)
+    if(act_amount>=2000)
     {
-        scanf("%d",&arr[i]);
+        dis_amount=act_amount-(act_amount*.30);
     }
-    printf("Entered elements are:\n");
-    for(i=0 ; i<n ; i++)
+    else if(act_amount>=1000)
     {
-        printf("%d ", arr[i]);
+        dis_amount=act_amount-(act_amount*.20);
     }
+    else
+    {
+        dis_amount=act_amount;
+    }
+    printf("Amount after discount:\n%.2f",dis_amount);
     return 0;
 }
-

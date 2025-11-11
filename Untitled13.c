@@ -1,34 +1,24 @@
 #include<stdio.h>
-int main ()
+int main()
 {
-    int n,i,j,temp;
-    int a[100];
+    int a,i;
+    char e;
+    printf("Enter age:\n");
+    scanf("%d",&a);
 
-    printf("Enter n:");
-    scanf("%d",&n);
+    printf("Enter income:\n");
+    scanf("%d",&i);
 
-    printf("Enter elements:\n");
-    for(i=0 ; i<n ; i++)
+    printf("Are you employed:\n");
+    scanf(" %c",&e);
+
+    if(a>=21 && i>=20000 && (e=='y' || e=='Y'))
     {
-        scanf("%d",&a[i]);
+        printf("Congratulations! You are eligible for a bank loan.");
     }
-
-    for(i=0 ; i<n-1 ; i++)
+    else
     {
-        for(j=i+1 ; j<n ; j++)
-        {
-            if(a[i]>a[j])
-            {
-                temp=a[i];
-                a[i]=a[j];
-                a[j]=temp;
-            }
-        }
-    }
-    printf("Sorted array:\n");
-    for(i=0 ; i<n ; i++)
-    {
-        printf("%d ",a[i]);
+        printf("sorry!! You are not eligible for a bank loan.");
     }
     return 0;
 }

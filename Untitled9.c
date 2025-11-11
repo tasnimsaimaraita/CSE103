@@ -1,33 +1,16 @@
 #include<stdio.h>
-int main()
-{
-    int n,i,a[10000];
-    int p=0,ne=0,z=0;
-    printf("Enter n:");
-    scanf("%d",&n);
+int main(){
+    float days,hours,weeks,months;
 
-    printf("Enter elements:\n");
-    for(i=0 ; i<n ; i++)
-    {
-        scanf("%d",&a[i]);
-    }
-    for(i=0 ; i<n ; i++)
-    {
-        if(a[i]>0)
-        {
-            p++;
-        }
-        else if(a[i]<0)
-        {
-            ne++;
-        }
-        else
-        {
-            z++;
-        }
-    }
-    printf("Positive =%d\n",p);
-    printf("Negative =%d\n",ne);
-    printf("Zero =%d\n",z);
+    printf("Enter days:");
+    scanf("%f",&days);
+
+    hours=days*24;
+    weeks=days/7;
+    months=days/30;
+
+    printf("%.2f hours\n",hours);
+    printf("%.2f weeks\n",weeks);
+    printf("%.2f months",months);
     return 0;
 }

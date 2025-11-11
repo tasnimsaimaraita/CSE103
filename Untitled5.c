@@ -1,33 +1,28 @@
 #include<stdio.h>
-int main ()
+int main()
 {
-    int n, i,even=0,odd=0;
-    int arr[100];
+    int n,i,min,a[1000];
 
     printf("Enter n:");
     scanf("%d",&n);
 
-    printf("Enter elements:\n");
+    printf("Enter values:");
     for(i=0 ; i<n ; i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&a[i]);
     }
 
-    for(i=0 ; i<n ; i++)
+    min=a[0];
+    for(i=1 ; i<n ; i++)
     {
-        if(arr[i]%2==0)
+        if(a[i]<min)
         {
-            even++;
-        }
-        else
-        {
-            odd++;
+            min=a[i];
         }
     }
-    printf("Total even numbers is %d\n",even);
-    printf("Total odd numbers is %d\n",odd);
-
+    printf("Minimum value %d",min);
     return 0;
 }
+
 
 

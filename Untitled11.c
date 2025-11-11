@@ -1,32 +1,18 @@
 #include<stdio.h>
-int main ()
-{
-    int n, i;
-    int a[100],m1,m2;
+int main(){
+    float days,hours,minutes,year;
 
-    printf("Enter n:");
-    scanf("%d",&n);
+    printf("Enter year:");
+    scanf("%f",&year);
 
-    printf("Enter elements:\n");
-    for(i=0 ; i<n ; i++)
-    {
-        scanf("%d",&a[i]);
-    }
-    m1=a[0];
-    m2=a[0];
+    days=year*365;
+    hours=days*24;
+    minutes=hours*60;
 
-    for(i=1 ; i<n ; i++)
-    {
-        if(a[i]>m1)
-        {
-            m2=m1;
-            m1=a[i];
-        }
-        else if(a[i]>m2 && a[i]!=m1)
-        {
-            m2=a[i];
-        }
-    }
-    printf("2nd largest element:%d\n",m2);
+    printf("%.2f days",days);
+    printf("%.2f hours\n",hours);
+    printf("%.2f minutes\n",minutes);
+
     return 0;
 }
+

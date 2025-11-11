@@ -1,23 +1,25 @@
 #include<stdio.h>
-int main ()
-{
-    int n, i,s=0;
-    int arr[100];
+int main(){
+    int n,i,age[1000],c=0;
 
     printf("Enter n:");
     scanf("%d",&n);
 
-    printf("Enter elements:\n");
-    for(i=0 ; i<n ; i++)
-    {
-        scanf("%d",&arr[i]);
+    printf("Enter ages:");
+    for(i=0 ; i<n ; i++){
+        scanf("%d",&age[i]);
     }
 
-    for(i=0 ; i<n ; i++)
-    {
-        s=s+arr[i];
+    for(i=0 ; i<n ; i++){
+        if(age[i]>=18)
+            c++;
     }
-    printf("sum of all elements are:%d\n",s);
+    printf("Eligible %d people \n",c);
+
+    for(i=0 ; i<n ; i++){
+        if(age[i]>=18)
+            printf("Age: %d\n",age[i]);
+    }
     return 0;
 }
 
