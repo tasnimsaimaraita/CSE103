@@ -1,25 +1,38 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,max,a[1000];
+    int num,row,col,r,c,matA[100][100];
+    printf("Enter no of row and column:\n");
+    scanf("%d %d",&row,&col);
 
-    printf("Enter n:");
-    scanf("%d",&n);
-
-    printf("Enter values:");
-    for(i=0 ; i<n ; i++)
+    printf("Enter the matrix:\n");
+    for(r=0 ; r<row ; r++)
     {
-        scanf("%d",&a[i]);
-    }
-    max=a[0];
-    for(i=1 ; i<n ; i++)
-    {
-        if(a[i]>max)
+        for(c=0 ; c<col ; c++)
         {
-            max=a[i];
+            scanf("%d",&matA[r][c]);
         }
     }
-    printf("Maximum value %d",max);
+    printf("enter a number to multiply with matrix:\n");
+    scanf("%d",&num);
+
+    for(r=0 ; r<row ; r++)
+    {
+        for(c=0 ; c<col ; c++)
+        {
+            matA[r][c] = num * matA[r][c];
+        }
+    }
+
+    printf("New matrix is :\n");
+    for(r=0 ; r<row ; r++)
+    {
+        for(c=0 ; c<col ; c++)
+        {
+            printf("%d ",matA[r][c]);
+        }
+        printf("\n");
+    }
     return 0;
 
 }

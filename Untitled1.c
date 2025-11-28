@@ -1,22 +1,27 @@
 #include<stdio.h>
+
 int main()
 {
-    double act_amount,dis_amount;
-    printf("Enter actual amount:\n");
-    scanf("%lf",&act_amount);
+    int row,col,r,c,matA[100][100];
+    printf("Enter no of row and column:\n");
+    scanf("%d %d",&row,&col);
 
-    if(act_amount>=2000)
+    printf("Enter the matrix:\n");
+    for(r=0 ; r<row ; r++)
     {
-        dis_amount=act_amount-(act_amount*.30);
+        for(c=0 ; c<col ; c++)
+        {
+            scanf("%d",&matA[r][c]);
+        }
     }
-    else if(act_amount>=1000)
+    printf("Transpose matrix is:\n");
+    for(c=0 ; c<col ; c++)
     {
-        dis_amount=act_amount-(act_amount*.20);
+        for(r=0 ; r<row ; r++)
+        {
+            printf("%d ",matA[r][c]);
+        }
+        printf("\n");
     }
-    else
-    {
-        dis_amount=act_amount;
-    }
-    printf("Amount after discount:\n%.2f",dis_amount);
     return 0;
 }

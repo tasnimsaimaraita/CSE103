@@ -1,33 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,max,min,a[1000];
+    int matA[3][3],r,c,sum=0;
 
-    printf("Enter n:");
-    scanf("%d",&n);
-
-    printf("Enter values:");
-    for(i=0 ; i<n ; i++)
+    printf("Enter the matrix:\n");
+    for(r=0 ; r<3 ; r++)
     {
-        scanf("%d",&a[i]);
-    }
-    max=a[0];
-    min=a[0];
-
-    for(i=1 ; i<n ; i++)
-    {
-        if(a[i]>max)
+        for(c=0 ; c<3 ; c++)
         {
-            max=a[i];
-        }
-        if(a[i]<min)
-        {
-            min=a[i];
+            scanf("%d",&matA[r][c]);
         }
     }
-    printf("Maximum value %d\n",max);
-    printf("Manimum value %d",min);
+
+    for(r=0 ; r<3 ; r++)
+    {
+        sum +=matA[r][r];
+    }
+    printf("Sum of main diagonal elements : %d\n",sum);
     return 0;
 
 }
-

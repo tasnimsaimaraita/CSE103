@@ -1,33 +1,36 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,m1,m2,a[1000];
+    int row,col,r,c,A[100][100];
 
-    printf("Enter n:");
-    scanf("%d",&n);
+    printf("Enter no of row and column:\n");
+    scanf("%d %d",&row,&col);
 
-    printf("Enter values:");
-    for(i=0 ; i<n ; i++)
+    printf("Enter the matrix:\n");
+    for(r=0 ; r<row ; r++)
     {
-        scanf("%d",&a[i]);
-    }
-    m1=a[0];
-    m2=a[0];
-
-    for(i=1 ; i<n ; i++)
-    {
-        if(a[i]>m1)
+        for(c=0 ; c<col ; c++)
         {
-            m2=m1;
-            m1=a[i];
-        }
-        else if(a[i]>m2 && a[i]!=m1)
-        {
-            m2=a[i];
+            scanf("%d",&A[r][c]);
         }
     }
-    printf("2nd Maximum value %d\n",m2);
+    for(r=0 ; r<row ; r++)
+    {
+        int rowsum=0;
+        for(c=0 ; c<col ; c++)
+        {
+            rowsum += A[r][c];
+        }
+        printf("Sum of row %d = %d\n", r+1,rowsum);
+    }
+    for(c=0 ; c<col ; c++)
+    {
+        int colsum=0;
+        for(r=0 ; r<row ; r++)
+        {
+            colsum += A[r][c];
+        }
+        printf("Sum of column %d = %d\n", c+1,colsum);
+    }
     return 0;
 }
-
-

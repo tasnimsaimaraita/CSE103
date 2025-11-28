@@ -1,28 +1,41 @@
-#include<stdio.h>
+#include<Stdio.h>
+#define size 3
 int main()
 {
-    int n,i,min,a[1000];
+    int A[size][size],B[size][size];
+    int r,c,equal=1;
 
-    printf("Enter n:");
-    scanf("%d",&n);
-
-    printf("Enter values:");
-    for(i=0 ; i<n ; i++)
+    printf("Input elements of matrix1:\n");
+    for(r=0 ; r<size ; r++)
     {
-        scanf("%d",&a[i]);
-    }
-
-    min=a[0];
-    for(i=1 ; i<n ; i++)
-    {
-        if(a[i]<min)
+        for(c=0 ; c<size ; c++)
         {
-            min=a[i];
+            scanf("%d",&A[r][c]);
         }
     }
-    printf("Minimum value %d",min);
+    printf("Input elements of matrix2:\n");
+    for(r=0 ; r<size ; r++)
+    {
+        for(c=0 ; c<size ; c++)
+        {
+            scanf("%d",&B[r][c]);
+        }
+    }
+
+    for(r=0 ; r<size ; r++)
+    {
+        for(c=0 ; c<size ; c++)
+        {
+            if(A[r][c] != B[r][c])
+            {
+                equal=0;
+                break;
+            }
+        }
+    }
+    if(equal)
+        printf("Both matrices are equal\n");
+    else
+        printf("Both matrices are not equal\n");
     return 0;
 }
-
-
-

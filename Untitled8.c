@@ -1,17 +1,40 @@
 #include<stdio.h>
 int main()
 {
-    float hours,days,weeks,months;
-    printf("Enter Hours:");
-    scanf("%f",&hours);
+    int row,col,r,c,A[100][100],temp;
 
-    days=hours/24;
-    weeks=days/7;
-    months=days/30;
+    printf("Enter no of row and column:\n");
+    scanf("%d %d",&row,&col);
 
-    printf("%.2f days\n",days);
-    printf("%.2f weeks\n",weeks);
-    printf("%.2f months",months);
+    if(row != col)
+    {
+        printf("Matrix must be square to interchange diagonals.\n");
+        return 0;
+    }
 
+    printf("Enter the matrix:\n");
+    for(r=0 ; r<row ; r++)
+    {
+        for(c=0 ; c<col ; c++)
+        {
+            scanf("%d",&A[r][c]);
+        }
+    }
+
+    for(r=0 ; r<row ; r++)
+    {
+        temp = A[r][r];
+        A[r][r] = A[r][c-1-r];
+        A[r][c-1-r] = temp;
+    }
+    printf("Matrix after interchanging its diagonal:\n");
+    for(r=0 ; r<row ; r++)
+    {
+        for(c=0 ; c<col ; c++)
+        {
+            printf("%d ",A[r][c]);
+        }
+        printf("\n");
+    }
     return 0;
 }

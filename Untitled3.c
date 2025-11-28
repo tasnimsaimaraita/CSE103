@@ -1,33 +1,43 @@
 #include<stdio.h>
+#define size 3
 int main()
 {
-    int n,i;
-    float s[10000],t[10000];
+    int A[size][size],B[size][size],C[size][size];
+    int r,c;
 
-    printf("Enter number of employee:");
-    scanf("%d",&n);
-
-    printf("Enter salary:");
-    for(i=0 ; i<n ; i++)
+    printf("Input elements in 3x3 matrix1:\n");
+    for(r=0 ; r<size ; r++)
     {
-        scanf("%f",&s[i]);
+        for(c=0 ; c<size ; c++)
+        {
+            scanf("%d",&A[r][c]);
+        }
     }
-
-
-    for(i=0 ; i<n ; i++)
+    printf("Input elements in 3x3 matrix2:\n");
+    for(r=0 ; r<size ; r++)
     {
-        if(s[i]<10000)
-
-            t[i]=0;
-        else if(s[i]<=20000)
-            t[i]=s[i]*.10;
-        else
-            t[i]=s[i]*.20;
+        for(c=0 ; c<size ; c++)
+        {
+            scanf("%d",&B[r][c]);
+        }
     }
-
-    for(i=0 ; i<n ; i++)
+    for(r=0 ; r<size ; r++)
     {
-        printf("Employee %d: salary= %.2f , Tax= %.2f\n", i+1,s[i],t[i]);
+        for(c=0 ; c<size ; c++)
+        {
+            C[r][c]=A[r][c]-B[r][c];
+        }
+    }
+    printf("Difference of both matrix:\n");
+    for(r=0 ; r<size ; r++)
+    {
+        for(c=0 ; c<size ; c++)
+        {
+            printf("%d ",C[r][c]);
+        }
+        printf("\n");
     }
     return 0;
+
 }
+

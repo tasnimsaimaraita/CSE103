@@ -1,25 +1,41 @@
 #include<stdio.h>
-int main(){
-    int n,i,age[1000],c=0;
+int main()
+{
+    int A[3][3],B[3][3],C[3][3];
+    int r,c;
 
-    printf("Enter n:");
-    scanf("%d",&n);
-
-    printf("Enter ages:");
-    for(i=0 ; i<n ; i++){
-        scanf("%d",&age[i]);
+    printf("Input elements in 3x3 matrix1:\n");
+    for(r=0 ; r<3 ; r++)
+    {
+        for(c=0 ; c<3 ; c++)
+        {
+            scanf("%d",&A[r][c]);
+        }
     }
-
-    for(i=0 ; i<n ; i++){
-        if(age[i]>=18)
-            c++;
+    printf("Input elements in 3x3 matrix2:\n");
+    for(r=0 ; r<3 ; r++)
+    {
+        for(c=0 ; c<3 ; c++)
+        {
+            scanf("%d",&B[r][c]);
+        }
     }
-    printf("Eligible %d people \n",c);
-
-    for(i=0 ; i<n ; i++){
-        if(age[i]>=18)
-            printf("Age: %d\n",age[i]);
+    for(r=0 ; r<3 ; r++)
+    {
+        for(c=0 ; c<3 ; c++)
+        {
+            C[r][c]=A[r][c]+B[r][c];
+        }
+    }
+    printf("Sum of both matrix:\n");
+    for(r=0 ; r<3 ; r++)
+    {
+        for(c=0 ; c<3 ; c++)
+        {
+            printf("%d ",C[r][c]);
+        }
+        printf("\n");
     }
     return 0;
-}
 
+}
