@@ -1,37 +1,24 @@
-#include<Stdio.h>
+#include<stdio.h>
+void even(int l,int u);
 int main()
 {
-    int row,col,r,c,A[100][100],flag=1;
-
-    printf("Enter no of row and column:\n");
-    scanf("%d %d",&row,&col);
-
-    printf("Enter the matrix:\n");
-    for(r=0 ; r<row ; r++)
-    {
-        for(c=0 ; c<col ; c++)
-        {
-            scanf("%d",&A[r][c]);
-        }
-    }
-
-    for(r=0 ; r<row ; r++)
-    {
-        for(c=0 ; c<col ; c++)
-        {
-            if(A[r][c] != A[r][c])
-            {
-                flag = 0;
-                break;
-            }
-        }
-        if(flag == 0)
-            break;
-    }
-    if(flag)
-        printf("The given matrix is Symmetric matrix\n");
-    else
-        printf("The given matrix is not Symmetric matrix\n");
-
+    int l, u;
+    printf("Enter lower & upper limit: ");
+    scanf("%d %d", &l, &u);
+    even(l,u);
     return 0;
+}
+void even(int l,int u)
+{
+    int sum=0;
+    printf("sum of even number between %d to %d\n",l,u);
+    for(int i=l ; i<=u ; i++)
+    {
+        if(i%2==0)
+        {
+            sum+=i;
+        }
+    }
+    printf("%d ",sum);
+
 }

@@ -1,41 +1,31 @@
 #include<stdio.h>
+#include<math.h>
+
+void diameter(int d);
+void circumference(int c);
+void area(int a);
+
 int main()
 {
-    int A[3][3],B[3][3],C[3][3];
-    int r,c;
-
-    printf("Input elements in 3x3 matrix1:\n");
-    for(r=0 ; r<3 ; r++)
-    {
-        for(c=0 ; c<3 ; c++)
-        {
-            scanf("%d",&A[r][c]);
-        }
-    }
-    printf("Input elements in 3x3 matrix2:\n");
-    for(r=0 ; r<3 ; r++)
-    {
-        for(c=0 ; c<3 ; c++)
-        {
-            scanf("%d",&B[r][c]);
-        }
-    }
-    for(r=0 ; r<3 ; r++)
-    {
-        for(c=0 ; c<3 ; c++)
-        {
-            C[r][c]=A[r][c]+B[r][c];
-        }
-    }
-    printf("Sum of both matrix:\n");
-    for(r=0 ; r<3 ; r++)
-    {
-        for(c=0 ; c<3 ; c++)
-        {
-            printf("%d ",C[r][c]);
-        }
-        printf("\n");
-    }
+    int r;
+    scanf("%d",&r);
+    diameter(r);
+    circumference(r);
+    area(r);
     return 0;
-
+}
+void diameter(int d)
+{
+    float dia=2*d;
+    printf("Diameter is %.2f\n",dia);
+}
+void circumference(int c)
+{
+    float cir=2*M_PI*c;
+    printf("Circumference is %.2f\n",cir);
+}
+void area(int a)
+{
+    float are=M_PI*a*a;
+    printf("Area is %.2f\n",are);
 }

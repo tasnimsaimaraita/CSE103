@@ -1,41 +1,37 @@
-#include<Stdio.h>
-#define size 3
+#include<stdio.h>
+void primenum(int p);
 int main()
 {
-    int A[size][size],B[size][size];
-    int r,c,equal=1;
-
-    printf("Input elements of matrix1:\n");
-    for(r=0 ; r<size ; r++)
+    int n;
+    printf("Enter any number:");
+    scanf("%d",&n);
+    primenum(n);
+    return 0;
+}
+void primenum (int p)
+{
+    int i,count=0;
+    if(p<=1)
     {
-        for(c=0 ; c<size ; c++)
-        {
-            scanf("%d",&A[r][c]);
-        }
+        printf("%d is not prime number.\n",p);
     }
-    printf("Input elements of matrix2:\n");
-    for(r=0 ; r<size ; r++)
+    else
     {
-        for(c=0 ; c<size ; c++)
+        for(i=2 ; i<p ; i++)
         {
-            scanf("%d",&B[r][c]);
-        }
-    }
-
-    for(r=0 ; r<size ; r++)
-    {
-        for(c=0 ; c<size ; c++)
-        {
-            if(A[r][c] != B[r][c])
+            if(p%i==0)
             {
-                equal=0;
+                count++;
                 break;
             }
         }
     }
-    if(equal)
-        printf("Both matrices are equal\n");
+    if(count==0)
+    {
+        printf("%d is prime number.\n",p);
+    }
     else
-        printf("Both matrices are not equal\n");
-    return 0;
+    {
+        printf("%d is not prime number.\n",p);
+    }
 }
